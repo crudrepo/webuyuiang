@@ -1,0 +1,44 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserserviceService } from '../userservice.service';
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+  username: string;
+  password: string;
+  invalidtext : string;
+  invalid : boolean = false;
+  constructor(private route: Router,private userServiceRef :UserserviceService) { }
+
+  ngOnInit() {
+  }
+  authenticateAdmin() {
+    console.log(this.username);
+    console.log(this.password);
+    let data = {
+      "emailId" : this.username,
+      "password" : this.password
+    };
+    this.userServiceRef.validateUser(data).subscribe(data => {
+      debugger;
+      if(data['status'])
+      {
+        this.route.navigate(['user/view']);
+      }
+      else
+      {
+        this.invalidtext = "invalid username , password";
+        this.invalid = true;
+      }
+    });
+
+    
+  }
+  navigateToSignUp() {
+    this.route.navigate(['user/signup']);
+  }
+
+}

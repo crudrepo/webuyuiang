@@ -1,0 +1,44 @@
+<div class="wrapper">
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Welcome Admin</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>Dummy Heading</p>
+            <li>
+                <a [routerLink]="['category']">Category</a>
+            </li>
+            <li>
+                <a [routerLink]="['product']">Product</a>
+            </li>
+            <li>
+                <a [routerLink]="['productlist']">Product List</a>
+            </li>
+            
+            <li>
+                <a [routerLink]="['order']">Order List</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content">
+        <!-- We'll fill this with dummy content -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+        <router-outlet></router-outlet>
+        </div>
+      </nav>
+    </div>
+
+</div>
+
+
+
+
+
+
+

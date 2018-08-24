@@ -1,0 +1,27 @@
+<form>
+    <div class="form-group">
+      <label for="catname">Enter Category</label>
+      <input type="text" class="form-control" name="catname" [(ngModel)]="catname" id="catname" placeholder="Category Name">
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="addCategory()">Add Category</button>
+  </form>
+  <hr>
+  
+  
+  <h3>Category List</h3>
+  <table class="table">
+   
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Category Name</th>
+       </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cat of catList; let i = index">
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ cat['name']}}</td>
+      </tr>
+    </tbody>
+  </table>

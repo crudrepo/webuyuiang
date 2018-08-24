@@ -1,0 +1,25 @@
+<table class="table">
+  <caption>List of users</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+
+      <th scope="col">Image</th>
+      <th scope="col">Price</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prod of prodList; let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{ prod['name'] }}</td>
+      <td>{{ prod['description'] }}</td>
+
+      <td><img src="{{ image_ref }}{{ prod['image'] }}" style="width:50px;height:50px"></td>
+      <td>{{ prod['price'] }}</td>
+    </tr>
+   
+  </tbody>
+</table>
