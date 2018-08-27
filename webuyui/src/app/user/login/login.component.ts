@@ -14,16 +14,26 @@ export class LoginComponent implements OnInit {
   constructor(private route: Router,private userServiceRef :UserserviceService) { }
 
   ngOnInit() {
+    debugger;
+    this.checkSession();  
+  }
+  checkSession() {
+    let chkSession = this.userServiceRef.checkSession();
+    if(chkSession)
+    {
+    
+    }
+    
   }
   authenticateAdmin() {
-    console.log(this.username);
-    console.log(this.password);
+  
     let data = {
       "emailId" : this.username,
       "password" : this.password
     };
+    
     this.userServiceRef.validateUser(data).subscribe(data => {
-      debugger;
+      
       if(data['status'])
       {
         this.route.navigate(['user/view']);

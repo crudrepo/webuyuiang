@@ -1,6 +1,6 @@
 
 <div class="container">
-<a [routerLink]="['products']">All Products</a> | <a [routerLink]="['viewcart']">cart</a> | <a [routerLink]="['checkout']">Checkout</a>
+<a [routerLink]="['products']">All Products</a> | <a [routerLink]="['viewcart']">cart</a> | <a [routerLink]="['checkout']">Checkout </a> | <a [routerLink]="['/user/logout']">Logout</a>
 <router-outlet></router-outlet>
 <footer class="my-5 pt-5 text-muted text-center text-small">
     <p class="mb-1">© 2017-2018 Company Name</p>
@@ -8,6 +8,7 @@
       <li class="list-inline-item"><a href="#">Privacy</a></li>
       <li class="list-inline-item"><a href="#">Terms</a></li>
       <li class="list-inline-item"><a href="#">Support</a></li>
+
     </ul>
   </footer>
 </div>

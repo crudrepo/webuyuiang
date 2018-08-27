@@ -10,6 +10,8 @@ import { ViewproductComponent } from './viewproduct/viewproduct.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserserviceService } from './userservice.service';
 import { SignupComponent } from './signup/signup.component';
+import { LogoutComponent } from './logout/logout.component';
+import { ProductlistComponent } from './productlist/productlist.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +19,7 @@ import { SignupComponent } from './signup/signup.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [LoginComponent, ProductsComponent, CartComponent, CheckoutComponent, ViewproductComponent, SignupComponent],
+  declarations: [LoginComponent, ProductsComponent, CartComponent, CheckoutComponent, ViewproductComponent, SignupComponent, LogoutComponent, ProductlistComponent],
   providers: [UserserviceService]
 })
 export class UserModule { }

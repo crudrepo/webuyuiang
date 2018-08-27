@@ -6,6 +6,7 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
 import { SignupComponent } from './signup/signup.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,10 @@ const routes: Routes = [
     path: 'signup',
     component: SignupComponent
   },
-  
+  {
+    path: 'logout',
+    component: LogoutComponent
+  },
   {
     path: 'view',
     component: ViewproductComponent,
