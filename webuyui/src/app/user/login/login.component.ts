@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   constructor(private route: Router,private userServiceRef :UserserviceService) { }
 
   ngOnInit() {
-    debugger;
+    
     this.checkSession();  
   }
   checkSession() {

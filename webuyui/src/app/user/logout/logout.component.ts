@@ -19,7 +19,7 @@ export class LogoutComponent implements OnInit {
 
 
   private newMethod() {
-    debugger;
+    
     this.serviceRef.logout();
    
   }

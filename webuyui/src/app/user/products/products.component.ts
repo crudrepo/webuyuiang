@@ -21,18 +21,18 @@ export class ProductsComponent implements OnInit {
   }
   getAllCategory() {
     this.UserserviceServiceRef.getAllCategory().subscribe(data =>{
-      debugger;
+      
       let arr = [];
       arr = data['result']['result'];
       for (let i in arr) {
-        debugger;
+        
         this.catArr[arr[i]['id']] = arr[i]['name'];
      }
     });
   }
   getAllProduct() {
     this.UserserviceServiceRef.getAllProducts().subscribe(data =>{
-      debugger;
+      
       if(data['status']) {
         this.productArr = data['result']['result'];
       }

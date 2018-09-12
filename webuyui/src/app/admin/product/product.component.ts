@@ -57,7 +57,7 @@ export class ProductComponent implements OnInit {
     data.append('price',this.price);
       this.serviceRef.importFile(data).subscribe(
       res => {
-        debugger;
+        
       }
     );
   }

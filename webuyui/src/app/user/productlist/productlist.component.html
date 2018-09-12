@@ -5,7 +5,7 @@
       <p class="card-text">{{product['name']}}</p>
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
-          <button type="button" class="btn btn-sm btn-outline-secondary">Add To Cart</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary" (click) = "addToCart()">Add To Cart</button>
           
         </div>
         <h3 class="text-dark"> {{product['price']}}Rs.</h3>

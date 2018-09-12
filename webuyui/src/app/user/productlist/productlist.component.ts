@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { UserserviceService } from '../userservice.service';
+
 
 @Component({
   selector: 'app-productlist',
@@ -8,9 +10,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProductlistComponent implements OnInit {
 @Input()product:any;
 image_ref: string="http://localhost:82/webuiphp-master/images/";
-  constructor() { }
+  constructor(private serviceRef :UserserviceService) { }
 
   ngOnInit() {
   }
-
+  addToCart() {
+    this.serviceRef.addToCart(this.product);
+  }
 }

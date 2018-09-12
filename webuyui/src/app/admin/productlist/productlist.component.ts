@@ -16,7 +16,7 @@ export class ProductlistComponent implements OnInit {
   }
   getProductList() {
     this.serviceRef.getAllProduct().subscribe(data =>{
-      debugger;
+      
       if(data['status']) {
         this.prodList = data['result']['result'];
       }
